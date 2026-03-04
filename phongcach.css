@@ -1,0 +1,425 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #fcfcfc;
+    color: #333;
+}
+
+/*HEADER & ĐIỀU HƯỚNG*/
+header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 15px 50px;
+}
+
+.dieuhuong {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-text strong {
+    display: block;
+    font-size: 20px;
+}
+
+.logo-text span {
+    font-size: 13px;
+    color: #666;
+}
+
+.dieuhuong-link {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.dieuhuong-link a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.dieuhuong-link a:hover {
+    color: #ffc107;
+}
+
+/*PHẦN GIỚI THIỆU*/
+.phan-gioi-thieu {
+    display: flex;
+    align-items: center;
+    padding: 60px 50px;
+    gap: 40px;
+    background-color: #fdfaf3;
+    /* Màu nền vàng nhạt */
+}
+
+.noi-dung-chu {
+    flex: 1;
+}
+
+.noi-dung-chu h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.noi-dung-chu h1 span {
+    color: #ffc107;
+}
+
+.noi-dung-chu p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.noi-dung-anh {
+    flex: 1;
+}
+
+.noi-dung-anh img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+/*CÁC NÚT BẤM CƠ BẢN*/
+.nhom-nut-bam {
+    display: flex;
+    gap: 15px;
+}
+
+.nut-vang {
+    background-color: #ffc107;
+    color: #000;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.nut-trang {
+    background-color: white;
+    color: #333;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.nut-vang-rong {
+    display: block;
+    text-align: center;
+    background-color: #ffc107;
+    color: #000;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+/*DANH SÁCH KHÓA HỌC*/
+.phan-khoa-hoc {
+    padding: 50px;
+}
+
+.tieu-de-phan {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 30px;
+}
+
+.tieu-de-phan h2 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.tieu-de-phan p {
+    color: #666;
+}
+
+.link-xem-tat-ca {
+    text-decoration: none;
+    color: #ffc107;
+    font-weight: bold;
+}
+
+/*chia 3 cột đơn giản */
+.danh-sach-khoa-hoc {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.the-khoa-hoc {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.the-khoa-hoc img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.thong-tin-khoa-hoc {
+    padding: 20px;
+}
+
+.thong-tin-khoa-hoc h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.thong-tin-khoa-hoc .mo-ta {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 15px;
+    height: 60px;
+}
+
+.thoi-gian,
+.khai-giang {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+/*BANNER*/
+.banner-vang {
+    background-color: #ffc107;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.banner-vang h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.banner-vang p {
+    margin-bottom: 30px;
+}
+
+.text-center {
+    justify-content: center;
+}
+
+.nut-vang-vien-trang {
+    background-color: transparent;
+    color: #333;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 2px solid white;
+}
+
+/*FOOTER*/
+footer {
+    background-color: #333;
+    color: white;
+    padding: 50px 50px 20px 50px;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.footer-col {
+    flex: 1;
+    padding-right: 30px;
+}
+
+.footer-col h4 {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.footer-col p {
+    color: #ccc;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#logo-footer {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.ban-quyen {
+    text-align: center;
+    border-top: 1px solid #555;
+    padding-top: 20px;
+    font-size: 13px;
+    color: #aaa;
+}
+
+/*TRANG KHÓA HỌC*/
+
+/* Banner màu vàng của trang khóa học */
+.banner-trang-con {
+    background-color: #ffc107;
+    padding: 60px 50px;
+    margin-bottom: 30px;
+}
+
+.banner-trang-con h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.banner-trang-con p {
+    font-size: 18px;
+    color: #444;
+}
+
+/* Dòng chữ thống kê "Tìm thấy 6 khóa học" */
+.thong-ke-khoa-hoc {
+    padding: 0 50px;
+    margin-bottom: 30px;
+    color: #555;
+    font-size: 16px;
+}
+
+.thong-ke-khoa-hoc span {
+    color: #ffc107;
+    font-weight: bold;
+}
+
+/* Kỹ thuật đè Nhãn (Badge) lên hình ảnh */
+.khung-anh {
+    position: relative;
+}
+
+/* Các nhãn định vị tuyệt đối so với khung ảnh */
+.nhan-trinh-do {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: white;
+    color: #333;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nhom-nhan-phai {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nhan-moi {
+    background-color: #ffc107;
+    color: #000;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nhan-hot {
+    background-color: #ff4d4f;
+    /* Màu đỏ */
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Khu vực CTA phía dưới (Không tìm thấy khóa học...) */
+.khu-vuc-cta-duoi {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #fff;
+    margin-bottom: 40px;
+}
+
+.khu-vuc-cta-duoi h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.khu-vuc-cta-duoi p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/*TRANG GIỚI THIỆU */
+
+.phan-gia-tri {
+    padding: 60px 50px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.phan-gia-tri h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.danh-sach-gia-tri {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.the-gia-tri {
+    background-color: #fdfaf3;
+    padding: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease;
+}
+
+/* Hiệu ứng nổi lên khi di chuột vào */
+.the-gia-tri:hover {
+    transform: translateY(-10px);
+}
+
+.bieu-tuong-gia-tri {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.the-gia-tri h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #ffc107;
+}
+
+.the-gia-tri p {
+    color: #555;
+    line-height: 1.6;
+}
