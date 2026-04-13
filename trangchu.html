@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="phongcach.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
@@ -175,6 +176,38 @@
             </div>
         </footer>
     </div>
+    <button id="btnBackToTop" style="display: none; position: fixed; bottom: 20px; right: 20px; z-index: 99; border: none; outline: none; background-color: #ffc107; color: white; cursor: pointer; padding: 15px; border-radius: 50%; font-size: 18px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+    &#8679;
+    </button>
+    <script>
+        $(document).ready(function(){
+            // 1. Xử lý hiện/ẩn nút Back to Top khi cuộn chuột
+            $(window).scroll(function () {
+                // Nếu cuộn xuống quá 300px thì hiện nút, ngược lại ẩn nút
+                if ($(this).scrollTop() > 300) {
+                    $('#btnBackToTop').fadeIn();
+                } else {
+                    $('#btnBackToTop').fadeOut();
+                }
+            });
+
+            // 2. Xử lý khi bấm nút Back to Top -> Cuộn mượt lên đầu
+            $('#btnBackToTop').click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 600);
+                return false;
+            });
+
+            // 3. Xử lý Smooth Scroll cho nút Liên hệ trên thanh Menu
+            $('a[href="#muc-lien-he"]').click(function(event){
+                // Ngăn chặn hành vi nhảy trang mặc định của thẻ a
+                event.preventDefault(); 
+                // Lấy vị trí của khu vực Footer (nơi có id="muc-lien-he")
+                let targetPosition = $('#muc-lien-he').offset().top;
+                // Tạo hiệu ứng trượt mượt mà trong 800 mili-giây
+                $('html, body').animate({ scrollTop: targetPosition }, 800);
+            });
+        });
+    </script>
 </body>
 
 </html>

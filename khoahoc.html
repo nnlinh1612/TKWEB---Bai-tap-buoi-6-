@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="phongcach.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
@@ -42,6 +43,12 @@
 
             <section class="phan-khoa-hoc">
                 <p class="thong-ke-khoa-hoc">Tìm thấy <span>6 khóa học</span> Tiếng Anh giao tiếp</p>
+                <div class="bo-loc-khoa-hoc" style="margin-bottom: 20px; display: flex; gap: 10px;">
+                    <button class="btn-loc nut-vang" data-filter="all">Tất cả</button>
+                    <button class="btn-loc nut-trang" data-filter="Beginner">Beginner</button>
+                    <button class="btn-loc nut-trang" data-filter="Intermediate">Intermediate</button>
+                    <button class="btn-loc nut-trang" data-filter="Advanced">Advanced</button>
+                </div>
 
                 <div class="danh-sach-khoa-hoc">
                     <div class="the-khoa-hoc">
@@ -189,6 +196,30 @@
             </div>
         </footer>
     </div>
+    <script>
+        $(document).ready(function () {
+            $('.btn-loc').click(function () {
+                // Đổi màu nút được chọn cho đẹp
+                $('.btn-loc').removeClass('nut-vang').addClass('nut-trang');
+                $(this).removeClass('nut-trang').addClass('nut-vang');
+
+                // Lấy giá trị data-filter của nút vừa bấm
+                let value = $(this).attr('data-filter');
+
+                if (value == "all") {
+                    // Nếu chọn 'Tất cả' thì hiện tất cả các thẻ có class .the-khoa-hoc
+                    $('.the-khoa-hoc').fadeIn('1000');
+                } else {
+                    // Ẩn tất cả đi
+                    $('.the-khoa-hoc').hide();
+                    // Duyệt qua từng khóa học, nếu nhãn trình độ khớp với nút thì cho hiện ra
+                    $('.the-khoa-hoc').filter(function () {
+                        return $(this).find('.nhan-trinh-do').text().trim() === value;
+                    }).fadeIn('1000');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="phongcach.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
@@ -79,6 +80,23 @@
                     </div>
                 </div>
             </section>
+            <section class="phan-faq" style="max-width: 800px; margin: 40px auto; padding: 0 20px;">
+                        <h2 style="text-align: center; margin-bottom: 20px;">Câu hỏi thường gặp</h2>
+                        
+                        <div class="faq-item" style="border-bottom: 1px solid #ddd; padding: 10px 0;">
+                            <h4 class="faq-question" style="cursor: pointer; margin: 0; color: #333;">Khóa học có cam kết đầu ra không? <span>+</span></h4>
+                            <div class="faq-answer" style="display: none; padding-top: 10px; color: #555;">
+                                Có. Forest English cam kết đầu ra bằng văn bản hợp đồng. Nếu bạn không đạt mục tiêu, trung tâm sẽ đào tạo lại hoàn toàn miễn phí.
+                            </div>
+                        </div>
+
+                        <div class="faq-item" style="border-bottom: 1px solid #ddd; padding: 10px 0;">
+                            <h4 class="faq-question" style="cursor: pointer; margin: 0; color: #333;">Lịch học có linh hoạt không? <span>+</span></h4>
+                            <div class="faq-answer" style="display: none; padding-top: 10px; color: #555;">
+                                Rất linh hoạt. Chúng tôi có các lớp sáng, chiều, tối và cuối tuần. Bạn cũng có thể chọn hình thức học Online nếu quá bận rộn.
+                            </div>
+                        </div>
+            </section>
 
             <section class="banner-vang">
                 <h2>Tham gia cùng 5000+ học viên thành công</h2>
@@ -115,6 +133,22 @@
             </div>
         </footer>
     </div>
+    <script>
+        $(document).ready(function() {
+            $('.faq-question').click(function() {
+                // Trượt đóng/mở câu trả lời ngay dưới câu hỏi vừa click
+                $(this).next('.faq-answer').slideToggle(300);
+                
+                // Thay đổi dấu + thành dấu -
+                let icon = $(this).find('span');
+                if(icon.text() === '+') {
+                    icon.text('-');
+                } else {
+                    icon.text('+');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
